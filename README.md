@@ -1,3 +1,6 @@
-# PythonBrasilExercicios
-Esse Repositório é preenchido pelo exercicios da Python Brasil resolvidos por mim em Python 3.
+#Exercícios Resolvidos
+
+Esse repositório tem exercícios resolvidos por mim em diferentes linguagems de programação.
+As questões principais são os exercícios da python brasil resolvidos.
+
 
