@@ -32,26 +32,16 @@ int main() {
     cout << "Apenas latas: " << quantidade_latas << " latas por R$ " << quantidade_latas * 80.0 << endl;
     cout << "Apenas galões: " << quantidade_galoes << " galões por R$ " << quantidade_galoes * 25.0 << endl;
 
-    quantidade_latas = floor(area / 108);
-    double resto = area - quantidade_latas * 108;
+    int litros = ceil(area / 6.0);
 
-    if(resto != 0){
-        quantidade_galoes = ceil(resto / (3.6 * 6));
-
-        double desperdicio_galao = quantidade_galoes * 21.6 - resto;
-        double desperdicio_lata = (quantidade_latas + 1) * 108 - area;
-
-        if(desperdicio_galao > desperdicio_lata){
-            quantidade_latas++;
-            quantidade_galoes = 0;
-        }
-    }else{
-        quantidade_galoes = 0;
-    }
+    quantidade_latas = litros / 18;
+    litros = litros % 18;
+    
+    quantidade_galoes = ceil(litros / 3.6);
     
     cout << "Mistura de latas e galões: " << endl;
-    cout << quantidade_latas << " latas por R$" << quantidade_latas * 80.0 << endl;
-    cout << quantidade_galoes << " galões por R$" << quantidade_galoes * 25.0 << endl;
+    cout << quantidade_latas << " lata(s) por R$" << quantidade_latas * 80.0 << endl;
+    cout << quantidade_galoes << " galão(ões) por R$" << quantidade_galoes * 25.0 << endl;
 
     return 0;
 }
